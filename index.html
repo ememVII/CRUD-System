@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products CRUD</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="my-2 p-4 border-bottom">Products Management System</h1>
+
+      <div class="my-3 m-auto bg-dark bg-opacity-25 p-4">
+        <div class="marks w-75 m-auto">
+        <label class="fw-bold">Product Name</label>
+        <input id="productNameInput" oninput="validateProductName()" type="text" class="form-control my-2" placeholder="Product Name">
+        <label class="fw-bold">Product Price</label>
+        <input id="productPriceInput" type="number" class="form-control my-2" placeholder="Product Price">
+        <label class="fw-bold">Product Category</label>
+        <input id="productCategoryInput" type="text" class="form-control my-2" placeholder="Product Category">
+        <label class="fw-bold">Product Description</label>
+        <input id="productDescriptionInput" type="text" class="form-control my-2" placeholder="Product Description">
+
+        <div id="btnsContainer">
+          <button id="addBtn" onclick="addProduct()" class="btn btn-primary">Add Product</button>
+          <!-- <button id="updateBtn" onclick="" class="btn d-none btn-success">Update Product</button> -->
+        </div>
+
+        <input oninput="searchProduct(this.value)" type="text" class="form-control my-2" placeholder="Search">
+
+        </div>
+      </div>
+
+      <table class="table my-3 border border-top">
+        <thead>
+          <th>Number</th>
+          <th>Product Name</th>
+          <th>Product Price</th>
+          <th>Product Category</th>
+          <th>Product Description</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+      </table>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
